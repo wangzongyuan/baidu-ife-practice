@@ -152,6 +152,11 @@
 	  問題點2：name的使用方法為定義input元素的名稱。
 	  另外placeholder的用法，還需要重新學習
 	  -->
+	  <!--
+	  2017.09.03.input的用法加強。
+	  嘗試使用checkbox （複選使用）與 radio(單選使用)。修正作業
+	  -->
+
 	  <p>請輸入郵箱地址：</p><input type="text" name="email" placeholder="Placeholder的用法好重要呀">
 	  <p>郵箱地址按要求格式輸入</p>
 	  <span>請輸入密碼：</span><input type="password" name="password" placeholder="請設定6-16位數密碼">
@@ -160,7 +165,60 @@
 	  <!--
 	  下面為單選表格，以及複選表格。忘記怎樣寫了。（2017.09.02）
 	  -->
-	  <button>提交</button>
+	  <!--
+	  在下面表格的施作下，遇到第一個問題是，是否使用from元素，如果要用的話，上面的應該標籤也要加上去。第二個問題是，當使用radio的部分，雖然使用單選的元素，但是點選的部分還是會出問題，經查詢需要在其加入checked，使其變成用戶單選一個的時候該按鈕變成選中，其他變成非選中。
+	  另外在name的部分，因為是呈現性別，所以需要使用的是sex的種類，另外在查詢資料的過程中發現，需要加上值(value)的判別，所以加上value="male" or value="female" (2017.09.03)
+	  -->
+	  <form>
+	  <span>男性</span>
+	  <input type="radio" name="sex" checked="checked" value="female">
+	  <span>女性</span>
+	  <input type="radio" name="sex" value="female"> 
+	  </form>
+	  <!--
+	  下拉式選單的用法，也是這次需要多練習的。
+	  select option的用法
+	  select 選擇
+	  option 選項
+
+	  -->
+	  <form>
+	  	<select name="city">
+	  		<option value="Beijing">北京</option>
+	  		<option value="Shanghai">上海</option>
+	  		<option value="Hangzhou">杭州</option>
+	  		<option value="Xiamen">廈門</option>
+	  		<option value="Taipei">台北</option>
+	  		<option value="Kaohsiung">高雄</option>
+	  	</select>
+	  </form>
+	  <form>
+	  		<span>愛好:</span>
+	  		<input type="checkbox" name="hobby" value="sport"> 
+	  		<span>運動</span>
+	  		<input type="checkbox" name="hobby" value="art"> 
+	  		<span>藝術</span>
+	  		<input type="checkbox" name="hobby" value="read"> 
+	  		<span>閱讀</span>
+	  <!--
+	  下面是多行文本域(textarea)的應用，整個表單的部分，還不是很熟練，應該透過codepen來進行練習。
+	  非input输入元素 :<textarea> 标签定义一个多行的文本输入控件。
+	  文本区域中可容纳无限数量的文本，其中的文本的默认字体是等宽字体（通常是 Courier）。
+	  可以通过 cols 和 rows 属性来规定 textarea 的尺寸大小，不过更好的办法是使用 CSS 的height 和 width 属性。
+	  -->
+	  </form>
+	  <form>
+	  	<span>個人敘述：</span>
+	  	<textarea name="">
+	  		
+	  	</textarea>
+	  <!--
+	  提交按鈕(submit)與button的不同，需要多練習
+	  -->
+	  <input type="submit" name="SB" value="确认提交">
+	  </form>
+
+
 
 
 </body>

@@ -192,6 +192,7 @@
 
 	  </table>
 	  </div>
+	  <!--
 
 	  <div class="content">
 	  <h2>這裡以後是一個側欄，這是側欄的標題</h2>
@@ -208,12 +209,13 @@
 	  男性<input type="radio" name="sex" checked="checked" value="female">
 	  女性<input type="radio" name="sex" value="female"> 
 	  </p>
-
+		-->
 	  <!--
 	  下拉式選單的部分，會不斷地將愛好的那一部分吃掉。原因待查明。
 	  這部分版還是排得亂七八糟的。
 	  如何將div的box來至中
 	  -->
+
 			<p>城市
 	  		<select name="city">
 		  		<option value="Beijing">北京</option>
@@ -242,7 +244,47 @@
 	  </form>
 	  </div>
 	</div>
-
+	
+	<!--
+	下面嘗試重新切版的方式，測試。切成大div內有三個中的div，然後第二個div在進行左右兩個div的分切。
+	發現先前select的問題，原來是因為沒有關閉標籤，所以造成愛好的部分字體流失。
+	CSS部分嚴重不熟練，所以需要兩天時間來重新學習CSS與CSS3。
+	-->
+	<div class="content">
+		<h2>這裡以後是一個側欄，這是側欄的標題</h2>
+		<div>
+			<div class="form">
+				<p class="form2">請輸入郵箱位置<input type="text" name="email" placeholder="Placeholder的用法好重要呀" class="form1"></p>
+				<p class="form2">請輸入密碼<input type="password" name="password" placeholder="請設定6-16位數密碼" class="form1"></p>
+				<p>密碼請為6-16位英文數字</p>
+				<p class="form2">請重複輸入密碼<input type="password" name="password" placeholder="請再次確認密碼" class="form1"></p>
+				<p class="form2">性別
+				男性<input type="radio" name="sex" checked="checked" value="female">
+				女性<input type="radio" name="sex" value="female"></p>
+				<p class="form2">城市<select name="city" class="form1">
+		  		<option value="Beijing">北京</option>
+		  		<option value="Shanghai">上海</option>
+		  		<option value="Hangzhou">杭州</option>
+		  		<option value="Xiamen">廈門</option>
+		  		<option value="Taipei">台北</option>
+		  		<option value="Kaohsiung">高雄</option>
+				</select>
+				</p>
+				<p class="form2">愛好
+				<input type="checkbox" name="hobby" value="sport" class="form">運動
+				<input type="checkbox" name="hobby" value="art">藝術
+				<input type="checkbox" name="hobby" value="read">閱讀
+				</p>
+				<p class="form2">個人敘述：
+                <textarea name="textarea" class="form1"></textarea>
+				</p>
+			</div>
+			
+		</div>
+		
+			<input type="submit" name="SB" value="確認提交" class="btn">
+		
+	</div>
 
 
 </body>
